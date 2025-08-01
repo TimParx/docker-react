@@ -7,4 +7,4 @@ before_install:
   - docker build -t TimParx/docker-react-f -f Dockerfile.dev .
 
 script:
-  - docker run TimParx/docker-react-f npm run test -- --coverage
+  - docker run -e CI=true TimParx/docker-react-f npm run test -- --coverage
