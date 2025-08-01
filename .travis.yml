@@ -10,14 +10,14 @@ script:
   - docker run -e CI=true TimParx/docker-react-f npm run test -- --coverage
 
 deploy:
-   provider: elasticbeanstalk
-    region: "eu-north-1"
-    app: "Docker-react"
-    env: "Docker-react-env"
-    bucket_name: "elasticbeanstalk-eu-north-1-302001396912"
-    bucket_path: "docker-react"
-    on:
-      branch: master
+  provider: elasticbeanstalk
+  region: "eu-north-1"
+  app: "Docker-react"
+  env: "Docker-react-env"
+  bucket_name: "elasticbeanstalk-eu-north-1-302001396912"
+  bucket_path: "docker-react"
+  on:
+    branch: master
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key:
     secure: $AWS_SECRET_KEY
